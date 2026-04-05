@@ -422,7 +422,6 @@ const Sponsors = () => {
             className="max-w-2xl mx-auto p-12 bg-black rounded-3xl flex flex-col items-center justify-center border border-gray-100 shadow-xl group hover:shadow-2xl transition-all duration-500"
           >
             <div className="w-full aspect-[3/1] flex items-center justify-center overflow-hidden">
-              {/* Sansaar Logo Placeholder */}
               <img 
                 src="/sponsors/sansaar-logo.png"
                 alt="Sansaar - A D'Decor Brand" 
@@ -453,7 +452,7 @@ const Sponsors = () => {
                 className="p-10 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100 hover:border-ted-red transition-all duration-300 group"
               >
                 <img 
-                  src=src={/sponsors/${sponsor.seed}.png} 
+                  src={`/sponsors/${sponsor.seed}.png`} 
                   alt={sponsor.name} 
                   className="max-h-20 w-auto grayscale group-hover:grayscale-0 transition-all duration-500"
                   referrerPolicy="no-referrer"

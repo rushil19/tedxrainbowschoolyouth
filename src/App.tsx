@@ -320,11 +320,10 @@ const Speakers = () => {
             >
               <div className="aspect-[4/5] bg-gray-200 overflow-hidden">
                 <img 
-                  src={`https://picsum.photos/seed/tedx-speaker-${speaker.name.replace(/\s+/g, '-').toLowerCase()}/600/800`} 
-                  alt={speaker.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                />
+  src={`/speakers/${speaker.name.replace(/\s+/g, '-').toLowerCase()}.jpg`} 
+  alt={speaker.name} 
+  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
               </div>
               <div className="p-8 flex-grow">
                 <h4 className="text-black text-2xl font-extrabold mb-2">{speaker.name}</h4>
@@ -425,7 +424,7 @@ const Sponsors = () => {
             <div className="w-full aspect-[3/1] flex items-center justify-center overflow-hidden">
               {/* Sansaar Logo Placeholder */}
               <img 
-                src="https://picsum.photos/seed/sansaar-logo/800/300" 
+                src="/sponsors/sansaar-logo.png"
                 alt="Sansaar - A D'Decor Brand" 
                 className="max-h-full w-auto grayscale invert brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
                 referrerPolicy="no-referrer"
@@ -454,7 +453,7 @@ const Sponsors = () => {
                 className="p-10 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100 hover:border-ted-red transition-all duration-300 group"
               >
                 <img 
-                  src={`https://picsum.photos/seed/${sponsor.seed}/400/150`} 
+                  src=src={/sponsors/${sponsor.seed}.png} 
                   alt={sponsor.name} 
                   className="max-h-20 w-auto grayscale group-hover:grayscale-0 transition-all duration-500"
                   referrerPolicy="no-referrer"

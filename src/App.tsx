@@ -196,8 +196,8 @@ const About = () => {
           className="relative aspect-square bg-gray-100 overflow-hidden group"
         >
           <img 
-            src="https://picsum.photos/seed/tedx-stage-2/800/800" 
-            alt="TEDx Stage" 
+            src="/about-event.jpg"
+            alt="TEDx Rainbow School Youth Stage" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
             referrerPolicy="no-referrer"
           />
@@ -298,6 +298,7 @@ const Speakers = () => {
     { name: 'Rahul Lakhanpal', title: 'Social Awareness & Responsibility' },
     { name: 'Aditya Shanker Raghuwanshi', title: 'Career Discovery' },
     { name: 'Huzaifa Hasan', title: 'Ambition & Exposure' },
+    { name: 'Ruhani Singh', title: 'Craft & Mindset' },
   ];
 
   return (

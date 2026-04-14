@@ -300,6 +300,7 @@ const Speakers = () => {
     { name: 'Huzaifa Hasan', title: 'Ambition & Exposure' },
     { name: 'Ruhani Singh', title: 'Craft & Mindset' },
     { name: 'Mridu Gupta', title: 'Health & Society' },
+    { name: 'Rouble Nagi', title: 'Art & Social Change' },
   ];
 
   return (

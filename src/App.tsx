@@ -299,6 +299,7 @@ const Speakers = () => {
     { name: 'Aditya Shanker Raghuwanshi', title: 'Career Discovery' },
     { name: 'Huzaifa Hasan', title: 'Ambition & Exposure' },
     { name: 'Ruhani Singh', title: 'Craft & Mindset' },
+    { name: 'Mridu Gupta', title: 'Health & Society' },
   ];
 
   return (

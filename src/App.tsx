@@ -39,13 +39,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Talks', href: '#speakers' },
     { name: 'About', href: '#about' },
-    { name: 'Speakers', href: '#speakers' },
-    { name: 'Attend', href: '#attend' },
     { name: 'Sponsors', href: '#sponsors' },
   ];
-
-  const APPLY_LINK = "https://forms.gle/F8HstmrN7ixbHHQB7";
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black py-4' : 'bg-transparent py-6'}`}>
@@ -109,8 +106,6 @@ const Navbar = () => {
 };
 
 const Hero = () => {
-  const APPLY_LINK = "https://forms.gle/F8HstmrN7ixbHHQB7";
-  
   return (
     <section className="relative h-screen w-full bg-black flex items-center justify-center overflow-hidden">
       {/* Background Glow */}
@@ -122,31 +117,21 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-white text-6xl md:text-8xl font-extrabold tracking-tighter mb-4">
+          <span className="inline-block bg-ted-red/20 text-ted-red border border-ted-red/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+            Event Successfully Completed 🎉
+          </span>
+          <h1 className="text-white text-5xl md:text-8xl font-extrabold tracking-tighter mb-4">
             Ideas From Everywhere
           </h1>
-          <p className="text-white/80 text-lg md:text-2xl max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-            A TEDx experience bringing together voices shaped by real experiences, bold thinking, and ideas that deserve to travel.
+          <p className="text-white/80 text-lg md:text-2xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+            TEDxRainbowSchoolYouth 2026 brought together voices shaped by real experiences and bold thinking. All 13 official speaker talks are now live on YouTube.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-            <p className="text-ted-red font-bold text-lg tracking-widest uppercase">
-              April 25, 2026 • Rainbow School, Saharanpur
-            </p>
-          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
-              href={APPLY_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#speakers"
               className="w-full sm:w-auto px-10 py-4 bg-ted-red text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 text-center"
             >
-              Apply to Attend
-            </a>
-            <a 
-              href="#partner" 
-              className="w-full sm:w-auto px-10 py-4 border-2 border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 text-center"
-            >
-              Partner With Us
+              Watch Official Talks
             </a>
           </div>
         </motion.div>
@@ -154,6 +139,72 @@ const Hero = () => {
 
       {/* Spotlight visual */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-32 bg-gradient-to-t from-ted-red/20 to-transparent blur-3xl" />
+    </section>
+  );
+};
+
+const Speakers = () => {
+  const speakers = [
+    { name: 'Sajal Jhamb', title: 'Grassroots Leadership', youtubeUrl: 'https://youtu.be/tf4yyiDyiVE?si=ymgr2uNFqkGTM5PX' },
+    { name: 'Aastha Sharma', title: 'Opportunity & Access', youtubeUrl: 'https://youtu.be/jtfLZjzDbqM?si=3SWHRbripf3zClOI' },
+    { name: 'Rajmohan Sathiyan', title: 'Education Reform', youtubeUrl: 'https://youtu.be/5X2zT9arqFM?si=K5yRRKL6dpX3lwKp' },
+    { name: 'Dr. Arti Khosla', title: 'Thinking & Learning', youtubeUrl: 'https://youtu.be/uluKGIHcRvw?si=KciJ_yt0mLWgy5b1' },
+    { name: 'Deepanshi Arora', title: 'Identity & Courage', youtubeUrl: 'https://youtu.be/8FTYCCcLMxk?si=_DNA1oSFUByhKJWr' },
+    { name: 'Rahul Lakhanpal', title: 'Social Awareness & Responsibility', youtubeUrl: 'https://youtu.be/HLkSbK0F-Jg?si=ud-jV2EhZtnX-_W1' },
+    { name: 'Aditya Shanker Raghuwanshi', title: 'Career Discovery', youtubeUrl: 'https://youtu.be/PMWRRYC8UlY?si=FUfKvVjNX8w3Icoc' },
+    { name: 'Huzaifa Hasan', title: 'Ambition & Exposure', youtubeUrl: 'https://youtu.be/mvHGJCfdgfs?si=RQqzM97zzhW0sA9P' },
+    { name: 'Ruhani Singh', title: 'Craft & Mindset', youtubeUrl: 'https://youtu.be/0bLXCDQrRf0?si=7w4cTV4_9n2Ah7pu' },
+    { name: 'Mridu Gupta', title: 'Health & Society', youtubeUrl: 'https://youtu.be/WBBz4jxbmaE?si=2kgceiDrPnWp4E8b' },
+    { name: 'Akshat Sharma', title: 'Mindset and Performance', youtubeUrl: 'https://youtu.be/cRE6Ec21wYI?si=6LcHxTEIoiCPjrsh' },
+    { name: 'Rouble Nagi', title: 'Art & Social Change', youtubeUrl: 'https://youtu.be/FGjJgf0pkJ0?si=fnPCzvppVu-D8DGV' },
+    { name: 'Ankit Singhal', title: 'The Art of Asking Questions', youtubeUrl: 'https://youtu.be/9gScU_4xvdo?si=fZAJv2MXycRjV270' }
+  ];
+
+  return (
+    <section id="speakers" className="py-24 bg-black">
+      <div className="max-width-container">
+        <div className="text-center mb-16">
+          <h2 className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-4">Official Talks</h2>
+          <p className="text-white/60 text-lg max-w-xl mx-auto mt-2 mb-6">Click on any speaker profile to view their full presentation directly on YouTube.</p>
+          <div className="w-24 h-1 bg-ted-red mx-auto" />
+        </div>
+
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {speakers.map((speaker, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="bg-white rounded-2xl overflow-hidden group flex flex-col"
+            >
+              <a 
+                href={speaker.youtubeUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="aspect-[4/5] bg-gray-200 overflow-hidden block relative cursor-pointer"
+              >
+                <img 
+                  src={`/speakers/${speaker.name.replace(/\./g, '').replace(/\s+/g, '-').toLowerCase()}.jpg`} 
+                  alt={speaker.name} 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                  <span className="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 bg-black/20 backdrop-blur-xs rounded-lg">
+                    Watch Talk
+                  </span>
+                </div>
+              </a>
+              
+              <div className="p-8 flex-grow">
+                <h4 className="text-black text-2xl font-extrabold mb-2">{speaker.name}</h4>
+                <p className="text-ted-red text-sm uppercase tracking-widest font-bold leading-tight">{speaker.title}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
@@ -288,71 +339,6 @@ const Theme = () => {
   );
 };
 
-const Speakers = () => {
-  const speakers = [
-    { name: 'Sajal Jhamb', title: 'Grassroots Leadership', youtubeUrl: 'https://youtu.be/tf4yyiDyiVE?si=ymgr2uNFqkGTM5PX' },
-    { name: 'Aastha Sharma', title: 'Opportunity & Access', youtubeUrl: 'https://youtu.be/jtfLZjzDbqM?si=3SWHRbripf3zClOI' },
-    { name: 'Rajmohan Sathiyan', title: 'Education Reform', youtubeUrl: 'https://youtu.be/5X2zT9arqFM?si=K5yRRKL6dpX3lwKp' },
-    { name: 'Dr. Arti Khosla', title: 'Thinking & Learning', youtubeUrl: 'https://youtu.be/uluKGIHcRvw?si=KciJ_yt0mLWgy5b1' },
-    { name: 'Deepanshi Arora', title: 'Identity & Courage', youtubeUrl: 'https://youtu.be/8FTYCCcLMxk?si=_DNA1oSFUByhKJWr' },
-    { name: 'Rahul Lakhanpal', title: 'Social Awareness & Responsibility', youtubeUrl: 'https://youtu.be/HLkSbK0F-Jg?si=ud-jV2EhZtnX-_W1' },
-    { name: 'Aditya Shanker Raghuwanshi', title: 'Career Discovery', youtubeUrl: 'https://youtu.be/PMWRRYC8UlY?si=FUfKvVjNX8w3Icoc' },
-    { name: 'Huzaifa Hasan', title: 'Ambition & Exposure', youtubeUrl: 'https://youtu.be/mvHGJCfdgfs?si=RQqzM97zzhW0sA9P' },
-    { name: 'Ruhani Singh', title: 'Craft & Mindset', youtubeUrl: 'https://youtu.be/0bLXCDQrRf0?si=7w4cTV4_9n2Ah7pu' },
-    { name: 'Mridu Gupta', title: 'Health & Society', youtubeUrl: 'https://youtu.be/WBBz4jxbmaE?si=2kgceiDrPnWp4E8b' },
-    { name: 'Akshat Sharma', title: 'Mindset and Performance', youtubeUrl: 'https://youtu.be/cRE6Ec21wYI?si=6LcHxTEIoiCPjrsh' },
-    { name: 'Rouble Nagi', title: 'Art & Social Change', youtubeUrl: 'https://youtu.be/FGjJgf0pkJ0?si=fnPCzvppVu-D8DGV' },
-    { name: 'Ankit Singhal', title: 'The Art of Asking Questions', youtubeUrl: 'https://youtu.be/9gScU_4xvdo?si=fZAJv2MXycRjV270' }
-  ];
-
-  return (
-    <section id="speakers" className="py-24 bg-black">
-      <div className="max-width-container">
-        <div className="text-center mb-16">
-          <h2 className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-4">Meet the Speakers</h2>
-          <div className="w-24 h-1 bg-ted-red mx-auto" />
-        </div>
-
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {speakers.map((speaker, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl overflow-hidden group flex flex-col"
-            >
-              <a 
-                href={speaker.youtubeUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="aspect-[4/5] bg-gray-200 overflow-hidden block relative cursor-pointer"
-              >
-                <img 
-                  src={`/speakers/${speaker.name.replace(/\./g, '').replace(/\s+/g, '-').toLowerCase()}.jpg`} 
-                  alt={speaker.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                  <span className="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 bg-black/20 backdrop-blur-xs rounded-lg">
-                    Watch Talk
-                  </span>
-                </div>
-              </a>
-              
-              <div className="p-8 flex-grow">
-                <h4 className="text-black text-2xl font-extrabold mb-2">{speaker.name}</h4>
-                <p className="text-ted-red text-sm uppercase tracking-widest font-bold leading-tight">{speaker.title}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const WhoShouldAttend = () => {
   const groups = [
     { icon: <GraduationCap />, title: 'Students', desc: 'Curious learners from Grades 6–12' },
@@ -362,9 +348,9 @@ const WhoShouldAttend = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white border-t border-gray-100">
       <div className="max-width-container">
-        <h2 className="text-black text-4xl md:text-5xl font-extrabold mb-16 uppercase tracking-tighter">Who Should Attend</h2>
+        <h2 className="text-black text-4xl md:text-5xl font-extrabold mb-16 uppercase tracking-tighter">Who Attended</h2>
         
         <div className="grid md:grid-cols-2 gap-12">
           {groups.map((group, i) => (
@@ -390,38 +376,9 @@ const WhoShouldAttend = () => {
   );
 };
 
-const Apply = () => {
-  const APPLY_LINK = "https://forms.gle/F8HstmrN7ixbHHQB7";
-
-  return (
-    <section id="attend" className="py-32 bg-ted-red text-white text-center">
-      <div className="max-width-container">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter uppercase">This is a curated experience.</h2>
-          <p className="text-white/90 text-xl md:text-2xl mb-12 font-light">
-            Limited seats. Selected audience.
-          </p>
-          <a 
-            href={APPLY_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-12 py-5 bg-black text-white font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 text-lg"
-          >
-            Apply Now
-          </a>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
 const Sponsors = () => {
   return (
-    <section id="sponsors" className="py-24 bg-white">
+    <section id="sponsors" className="py-24 bg-white border-t border-gray-100">
       <div className="max-width-container">
         <div className="text-center mb-20">
           <h2 className="text-ted-red text-sm font-bold uppercase tracking-[0.3em] mb-4">Our Partners</h2>
@@ -487,7 +444,7 @@ const EventDetails = () => {
     <section className="py-24 bg-black text-white">
       <div className="max-width-container">
         <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 p-12 md:p-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-12 uppercase tracking-widest">Event Details</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-12 uppercase tracking-widest">Event Archive Details</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             <div className="flex flex-col items-center">
@@ -508,7 +465,7 @@ const EventDetails = () => {
             <div className="flex flex-col items-center lg:col-span-3">
               <MessageSquare className="text-ted-red mb-4" size={32} />
               <h4 className="text-white/50 text-sm uppercase tracking-widest mb-2">Format</h4>
-              <p className="text-xl font-bold">Talks + Discussions</p>
+              <p className="text-xl font-bold">Talks + Live Showcase</p>
             </div>
           </div>
         </div>
@@ -546,9 +503,8 @@ const Footer = () => {
             <div>
               <h4 className="font-bold uppercase tracking-widest mb-6">Explore</h4>
               <ul className="space-y-4 text-white/50">
+                <li><a href="#speakers" className="hover:text-white transition-colors">Talks</a></li>
                 <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#speakers" className="hover:text-white transition-colors">Speakers</a></li>
-                <li><a href="#attend" className="hover:text-white transition-colors">Attend</a></li>
                 <li><a href="#sponsors" className="hover:text-white transition-colors">Sponsors</a></li>
               </ul>
             </div>
@@ -572,7 +528,7 @@ const Footer = () => {
   );
 };
 
-// --- Main App ---
+// --- Main App Layout ---
 
 export default function App() {
   return (
@@ -580,12 +536,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Speakers />
         <About />
         <WhyItMatters />
         <Theme />
-        <Speakers />
         <WhoShouldAttend />
-        <Apply />
         <Sponsors />
         <EventDetails />
       </main>

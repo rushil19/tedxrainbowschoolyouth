@@ -390,7 +390,7 @@ const Speakers = () => {
       </div>
     </section>
   );
-};
+
 
 const WhoShouldAttend = () => {
   const groups = [

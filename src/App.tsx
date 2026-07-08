@@ -323,7 +323,6 @@ const Speakers = () => {
               whileHover={{ y: -10 }}
               className="bg-white rounded-2xl overflow-hidden group flex flex-col"
             >
-              {/* Clickable Image Link wrapper */}
               <a 
                 href={speaker.youtubeUrl} 
                 target="_blank" 
@@ -335,7 +334,6 @@ const Speakers = () => {
                   alt={speaker.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                {/* Watch Talk Overlay UI */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                   <span className="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 bg-black/20 backdrop-blur-xs rounded-lg">
                     Watch Talk
@@ -354,43 +352,6 @@ const Speakers = () => {
     </section>
   );
 };
-
-  return (
-    <section id="speakers" className="py-24 bg-black">
-      <div className="max-width-container">
-        <div className="text-center mb-16">
-          <h2 className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-4">Meet the Speakers</h2>
-          <div className="w-24 h-1 bg-ted-red mx-auto" />
-        </div>
-
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {speakers.map((speaker, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl overflow-hidden group flex flex-col"
-            >
-              <div className="aspect-[4/5] bg-gray-200 overflow-hidden">
-                <img 
-  src={`/speakers/${speaker.name.replace(/\s+/g, '-').toLowerCase()}.jpg`} 
-  alt={speaker.name} 
-  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-              </div>
-              <div className="p-8 flex-grow">
-                <h4 className="text-black text-2xl font-extrabold mb-2">{speaker.name}</h4>
-                <p className="text-ted-red text-sm uppercase tracking-widest font-bold leading-tight">{speaker.title}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-
 
 const WhoShouldAttend = () => {
   const groups = [

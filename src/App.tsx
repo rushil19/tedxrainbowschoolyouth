@@ -23,6 +23,7 @@ import {
   Zap,
   ShieldCheck
 } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // --- Components ---
 
@@ -545,6 +546,7 @@ export default function App() {
         <EventDetails />
       </main>
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
